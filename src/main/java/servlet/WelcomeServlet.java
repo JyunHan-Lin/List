@@ -22,7 +22,7 @@ public class WelcomeServlet extends HttpServlet {
 		String name = req.getParameter("name");
 		String age = req.getParameter("age");
 		
-		resp.getWriter().print(name + "歡迎光臨!" + "(" + age + ")");
+		resp.getWriter().print(name + "歡迎光臨!" + "(" + age + "歲 )");
 		
 	}
 
