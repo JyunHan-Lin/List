@@ -17,7 +17,12 @@ public class WelcomeServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html;charset=UTF-8");
 		
-		resp.getWriter().print("歡迎光臨!");
+		// 接受參數
+		// 例如: http://localhost:8080/JavaWeb/welcome?name=Jack
+		String name = req.getParameter("name");
+		String age = req.getParameter("age");
+		
+		resp.getWriter().print(name + "歡迎光臨!" + "(" + age + ")");
 		
 	}
 
